@@ -6,17 +6,22 @@ import EmployeeList from "../employee-list/employee-list";
 import EmployeeAddForm from "../employee-add-form/employee-add-form";
 
 function App() {
-  return (
-      <div className="app">
-          <AppInfo/>
-          <div className="search-panel">
-              <SearchPanel/>
-              <AppFilter/>
+    const data = [
+        {name: 'John C.', salary: 800, increase: false, id: 1},
+        {name: 'Alex M.', salary: 3000, increase: true, id: 2},
+        {name: 'Carl W.', salary: 5000, increase: false, id: 3},
+    ];
+      return (
+          <div className="app">
+              <AppInfo/>
+              <div className="search-panel">
+                  <SearchPanel/>
+                  <AppFilter/>
+              </div>
+              <EmployeeList data={data}/>
+              <EmployeeAddForm/>
           </div>
-          <EmployeeList/>
-          <EmployeeAddForm/>
-      </div>
-  );
+      );
 }
 
 export default App;
