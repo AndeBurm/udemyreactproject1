@@ -2,12 +2,10 @@ import {Component} from 'react'
 import './employee-add-form.css'
 
 class EmployeeAddForm extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: '',
-            salary: ''
-        }
+
+    state = {
+        name: '',
+        salary: ''
     }
 
     onValueChange = (e) => {
@@ -23,6 +21,10 @@ class EmployeeAddForm extends Component{
             name: '',
             salary: ''
         })
+    }
+
+    static onLog = () => {
+        console.log('dot')
     }
 
     render () {
